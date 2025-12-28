@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澱粉讓你胖？糖 vs 醣，到底差在哪？</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 1;
+            font-weight: 400;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.2em;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin: 50px 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin: 35px 0 20px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            color: #444;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-size: 1.1em;
+            font-style: italic;
+            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #4CAF50;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 30px;
+        }
+
+        li {
+            margin: 12px 0;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        .good-list {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .good-list li::marker {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .bad-list {
+            background: #ffebee;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .bad-list li::marker {
+            content: "✗ ";
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .comparison-card {
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.good {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            border: 2px solid #4CAF50;
+        }
+
+        .comparison-card.bad {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffe082 100%);
+            border: 2px solid #ff9800;
+        }
+
+        .comparison-card h4 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .comparison-card.good h4,
+        .comparison-card.good h5 {
+            color: #00695c;
+        }
+
+        .comparison-card.bad h4,
+        .comparison-card.bad h5 {
+            color: #d84315;
+        }
+
+        .principle-box {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+        }
+
+        .principle-box h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .stats p {
+            color: white;
+        }
+
+        .stats strong {
+            color: white;
+        }
+
+        .stats-number {
+            font-size: 3em;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 50px 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: white;
+        }
+
+        .cta-section strong {
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        em {
+            color: #764ba2;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* 特殊背景下的文字顏色覆蓋 */
+        .stats strong,
+        .cta-section strong,
+        .quote strong {
+            color: white !important;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        /* LINE官方帳號區塊樣式 */
+        .line-section {
+            background: linear-gradient(135deg, #06C755 0%, #00B900 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .line-section h3 {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .line-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .line-info {
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+        }
+
+        .line-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            color: #06C755;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .line-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .line-button svg {
+            flex-shrink: 0;
+        }
+
+        .line-id {
+            color: white;
+            font-size: 1.1em;
+            margin-top: 15px;
+        }
+
+        .line-id strong {
+            color: white !important;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+
+        .qrcode-container {
+            flex: 0 0 auto;
+        }
+
+        .qrcode-box {
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+
+        .qrcode-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qrcode-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            text-align: center;
+            font-size: 0.9em;
+            padding: 10px;
+        }
+
+        .qrcode-text {
+            color: white;
+            font-size: 1em;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 250px;
+            }
+
+            .line-section {
+                padding: 40px 25px;
+            }
+
+            .line-section h3 {
+                font-size: 1.4em;
+            }
+
+            .line-content {
+                gap: 30px;
+            }
+
+            .line-button {
+                font-size: 1.1em;
+                padding: 15px 28px;
+            }
+
+            .line-button svg {
+                width: 35px;
+                height: 35px;
+            }
+
+            .qrcode-box {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>澱粉讓你胖？糖 vs 醣，到底差在哪？</h1>
+            <p class="subtitle">為什麼我的3000位學生每天吃澱粉，還瘦了3萬公斤</p>
+        </header>
+
+        <!-- 主視覺圖片區域 -->
+        <div class="hero-image">
+            <img src="main-image.jpg" alt="健康澱粉食物" onerror="this.parentElement.innerHTML='[ 請放置主視覺圖片：main-image.jpg ]'">
+        </div>
+
+        <div class="content">
+            <div class="quote">
+                「休校長,減肥是不是不能吃飯？」<br>
+                「澱粉是不是很容易胖？」<br>
+                「人家都說減肥就是不能吃澱粉⋯⋯」<br><br>
+                這是我最常被問到的問題。
+            </div>
+
+            <p>很多人以為減肥就是要戒澱粉。不吃飯、不吃麵、不吃麵包，只吃肉和菜。我以前也是這樣想的，我也戒過澱粉。</p>
+
+            <p>結果呢？前幾天很有效，體重掉很快。但很快就撞牆了。</p>
+
+            <div class="bad-list">
+                <ul>
+                    <li>沒力氣，整天昏昏沉沉</li>
+                    <li>脾氣變差，容易暴躁</li>
+                    <li>便秘嚴重</li>
+                    <li>一吃澱粉就立刻復胖</li>
+                </ul>
+            </div>
+
+            <p>最後受不了，大吃一頓。體重不只回來，還更重。然後責怪自己意志力不夠。</p>
+
+            <div class="divider"></div>
+
+            <div class="stats">
+                <p>但我要告訴你一個秘密：</p>
+                <div class="stats-number">25公斤</div>
+                <p>我減重25公斤的過程中，<strong style="color: white;">每天都吃澱粉</strong>，而且吃得很飽</p>
+            </div>
+
+            <div class="success-box">
+                <h4>我的3000位學生也一樣</h4>
+                <p>他們總共瘦了超過<strong>3萬公斤</strong>。每一個人，每天都有吃澱粉。有人瘦10公斤、20公斤、甚至30公斤，都沒有戒澱粉。</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>問題從來不是「要不要吃澱粉」</h4>
+                <p>而是<strong>「你吃對澱粉了嗎？」</strong></p>
+            </div>
+
+            <h2>首先，糖跟醣到底差在哪</h2>
+
+            <p>很多人把這兩個搞混。看到營養標籤上寫「碳水化合物（醣）」就嚇到：「天啊！這個糖好多！我不能吃！」然後什麼澱粉都不敢碰。</p>
+
+            <p>但其實，<strong>糖跟醣是不一樣的東西</strong>。</p>
+
+            <div class="comparison-grid">
+                <div class="comparison-card bad">
+                    <h4>糖（糖）</h4>
+                    <p>就是甜的那個糖</p>
+                    <ul>
+                        <li>精緻糖、砂糖、果糖、蔗糖</li>
+                        <li>手搖飲裡的糖</li>
+                        <li>蛋糕、餅乾、糖果裡的糖</li>
+                        <li>果汁裡的果糖</li>
+                    </ul>
+                    <p><strong>這些要減少，沒錯。</strong></p>
+                </div>
+
+                <div class="comparison-card good">
+                    <h4>醣（醣）</h4>
+                    <p>碳水化合物的總稱</p>
+                    <ul>
+                        <li>糖（上面說的那些）</li>
+                        <li>澱粉（飯、麵、地瓜）</li>
+                        <li>膳食纖維（蔬菜、全穀類裡的）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>簡單記：</h4>
+                <p><strong>糖是醣的一種，但醣不等於糖</strong></p>
+                <p>就像：水果是食物的一種，但食物不等於水果。糖只是醣這個大家族裡的一員。</p>
+            </div>
+
+            <h3>為什麼要搞懂這個？</h3>
+
+            <p>因為營養標籤上寫的「碳水化合物（醣）」，裡面包含了：</p>
+
+            <ul>
+                <li>✓ 糖（要減少的）</li>
+                <li>✓ 精緻澱粉（要注意的）</li>
+                <li>✓ 全穀澱粉（要吃的）</li>
+                <li>✓ 膳食纖維（要多吃的）</li>
+            </ul>
+
+            <p>所以<strong>不能看到「醣」就以為都是壞東西</strong>。重點是要分辨「好的醣」跟「壞的醣」。</p>
+
+            <div class="highlight-box">
+                <h4>特別說明：天然糖 vs 添加糖</h4>
+                <p><strong>天然糖</strong>（水果裡的果糖）：有纖維包著、有維生素、礦物質，適量吃OK</p>
+                <p><strong>添加糖</strong>（手搖飲、蛋糕裡的糖）：沒有纖維、沒有營養，要減少</p>
+                <ul>
+                    <li>✓ 吃一顆蘋果 → OK（天然糖+纖維）</li>
+                    <li>✗ 喝一杯蘋果汁 → 不好（天然糖但纖維被去掉了）</li>
+                    <li>✗ 喝珍奶 → 更不好（添加糖+沒纖維）</li>
+                </ul>
+                <p>不要矯枉過正，連水果都不敢吃。新鮮水果是好的，適量吃沒問題。</p>
+            </div>
+
+            <h2>真正的問題：好澱粉 vs 壞澱粉</h2>
+
+            <p>澱粉本身沒有錯。錯的是<strong>「精緻加工」和「失去纖維」</strong>。</p>
+
+            <p>國外有本書叫「好碳水、壞碳水」，講的就是這件事。讓我來教你怎麼分辨：</p>
+
+            <div class="comparison-grid">
+                <div class="comparison-card bad">
+                    <h4>壞澱粉（精緻澱粉）</h4>
+                    <ul>
+                        <li>白吐司、白麵包、甜麵包</li>
+                        <li>白麵條</li>
+                        <li>蛋糕、餅乾、甜甜圈</li>
+                        <li>珍珠、粉圓、芋圓</li>
+                        <li>勾芡的醬汁</li>
+                        <li>炒飯、炒米粉</li>
+                        <li>麵包粉裹的炸物</li>
+                    </ul>
+                    <h5 style="margin-top: 15px;">為什麼不好：</h5>
+                    <ul>
+                        <li>纖維完全被去掉了</li>
+                        <li>血糖快速飆升</li>
+                        <li>容易餓、容易想再吃</li>
+                        <li>多餘的糖變成脂肪囤積</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card good">
+                    <h4>好澱粉（原型澱粉）</h4>
+                    <ul>
+                        <li>糙米、五穀飯、胚芽米</li>
+                        <li>地瓜、芋頭、南瓜、山藥</li>
+                        <li>全麥麵包（真的全麥）</li>
+                        <li>燕麥、藜麥、小米</li>
+                        <li>豆類（紅豆、綠豆、鷹嘴豆）</li>
+                        <li>玉米（水煮的）</li>
+                        <li>馬鈴薯（蒸的、烤的）</li>
+                    </ul>
+                    <h5 style="margin-top: 15px;">為什麼好：</h5>
+                    <ul>
+                        <li>保留完整纖維</li>
+                        <li>血糖上升緩慢平穩</li>
+                        <li>飽足感強、持久</li>
+                        <li>幫助腸道健康</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>特別說明：白飯的定位</h4>
+                <p>你可能會問：「那白飯呢？」</p>
+                <p>白飯其實不算壞澱粉。雖然糙米確實比白飯更好（纖維更多），但白飯比起蛋糕、麵包、珍奶這些，已經好很多了。</p>
+                <p><strong>白飯的關鍵不是好壞，而是怎麼吃：</strong></p>
+                <ul>
+                    <li>✗ 單吃一碗白飯 → 血糖暴衝</li>
+                    <li>✗ 一大碗飯配一點菜 → 還是不夠好</li>
+                    <li>✓ 白飯 + 大量蔬菜 + 蛋白質 → 這樣吃就OK</li>
+                    <li>✓ 半碗白飯 + 大半碗菜 + 一個手掌蛋白質 → 更好</li>
+                </ul>
+            </div>
+
+            <h3>為什麼？因為「混合進食效應」</h3>
+
+            <p>這是營養學的專業概念。當你把白飯混著蔬菜、蛋白質、油脂一起吃時，整餐的升糖指數（GI值）會被拉低。</p>
+
+            <div class="principle-box">
+                <p>單吃白飯 GI = 80（很高）</p>
+                <p>但白飯+菜+肉一起吃，整餐的 GI 可能只有 50-60（中等）</p>
+                <p style="margin-top: 15px;"><strong>重點是「複合著吃」，不是「單吃一樣」</strong></p>
+            </div>
+
+            <h3>關鍵差別：膳食纖維</h3>
+
+            <p>這是好澱粉跟壞澱粉最大的不同。膳食纖維就像<strong>血糖的守門員</strong>。</p>
+
+            <div class="comparison-grid">
+                <div class="comparison-card good">
+                    <h4>好澱粉（有守門員）</h4>
+                    <p>纖維會包住澱粉<br>
+                    讓糖分緩慢釋放到血液<br>
+                    血糖平穩上升<br>
+                    胰島素適量分泌<br>
+                    能量穩定供應<br>
+                    不會一下餓一下飽</p>
+                </div>
+
+                <div class="comparison-card bad">
+                    <h4>壞澱粉（沒有守門員）</h4>
+                    <p>沒有纖維保護<br>
+                    糖分快速衝進血液<br>
+                    血糖暴衝<br>
+                    胰島素拼命分泌<br>
+                    血糖又快速下降<br>
+                    你又餓了，想再吃<br>
+                    惡性循環</p>
+                </div>
+            </div>
+
+            <h2>為什麼好澱粉不會讓你胖</h2>
+
+            <p>很多人以為：澱粉 = 熱量 = 會胖</p>
+
+            <p>但其實重點不只是熱量。更重要的是<strong>「你的身體如何處理這些熱量」</strong>。</p>
+
+            <div class="comparison-grid">
+                <div class="comparison-card bad">
+                    <h4>當你吃精緻澱粉</h4>
+                    <ol>
+                        <li>血糖快速飆高（像坐雲霄飛車）</li>
+                        <li>胰島素大量分泌（緊急處理）</li>
+                        <li>把糖快速塞進細胞（變脂肪儲存）</li>
+                        <li>血糖又快速下降</li>
+                        <li>你又餓了，而且特別想吃甜的</li>
+                        <li>重複循環</li>
+                    </ol>
+                    <p style="margin-top: 15px;"><strong>長期下來：</strong>胰島素累壞了、身體變得容易囤脂肪、代謝越來越差、越來越難瘦</p>
+                </div>
+
+                <div class="comparison-card good">
+                    <h4>當你吃好澱粉</h4>
+                    <ol>
+                        <li>血糖緩慢上升（平穩的斜坡）</li>
+                        <li>胰島素適量分泌（從容處理）</li>
+                        <li>能量平穩供應給細胞使用</li>
+                        <li>血糖維持穩定</li>
+                        <li>飽足感持續3-4小時</li>
+                        <li>不會一直想吃</li>
+                    </ol>
+                    <p style="margin-top: 15px;"><strong>長期下來：</strong>胰島素敏感度維持良好、身體願意釋放脂肪、代謝正常運作、自然就瘦了</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>好澱粉還有一個秘密武器：自動煞車機制</h4>
+                <p>你可能會問：「那好澱粉吃太多，熱量爆表不是一樣會胖？」</p>
+                <p>理論上是的。但實際上，<strong>你根本吃不下那麼多</strong>。</p>
+                <p>因為好澱粉纖維多、體積大、需要咀嚼很久、飽足感來得快。你試試看一次吃3碗糙米飯，根本吃不下。但3碗白飯拌炒飯？很容易就吃完了。</p>
+            </div>
+
+            <h2>如何分辨好澱粉跟壞澱粉：3個判斷標準</h2>
+
+            <p>不用死背清單。學會這3個標準，你就能自己判斷。</p>
+
+            <div class="principle-box">
+                <h4>標準一：看加工程度</h4>
+                <p><strong>原則：越接近原型，越好</strong></p>
+                <ul>
+                    <li>✓ 好：整顆地瓜、糙米、燕麥片</li>
+                    <li>✗ 壞：地瓜片（油炸）、白米、即食燕麥（加糖）</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <h4>標準二：看纖維有沒有被去掉</h4>
+                <p><strong>原則：纖維在，就是好澱粉</strong></p>
+                <ul>
+                    <li>✓ 好：全麥麵包、糙米、五穀飯</li>
+                    <li>✗ 壞：白麵包、蛋糕、餅乾</li>
+                </ul>
+                <p style="margin-top: 15px;">怎麼知道有沒有纖維？看營養標籤的「膳食纖維」：</p>
+                <ul>
+                    <li>每100g有3g以上的纖維 → 不錯</li>
+                    <li>有5g以上 → 很好</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <h4>標準三：想像血糖會不會暴衝</h4>
+                <p><strong>原則：能讓血糖緩慢上升的，就是好澱粉</strong></p>
+                <ul>
+                    <li>✓ 好：地瓜、糙米飯、豆類</li>
+                    <li>✗ 壞：蛋糕、白吐司、珍珠奶茶</li>
+                </ul>
+                <p style="margin-top: 15px;">簡單測試：</p>
+                <ul>
+                    <li>如果吃完1-2小時後你又餓了 → 壞澱粉</li>
+                    <li>如果吃完3-4小時還很飽 → 好澱粉</li>
+                </ul>
+            </div>
+
+            <h2>如何吃澱粉不會胖：5個黃金原則</h2>
+
+            <p>知道好壞澱粉還不夠，還要知道怎麼吃。</p>
+
+            <div class="principle-box">
+                <h4>原則一：選原型，不選加工</h4>
+                <ul>
+                    <li>✓ 地瓜 > 地瓜球</li>
+                    <li>✓ 糙米 > 白米 > 稀飯</li>
+                    <li>✓ 蒸玉米 > 玉米濃湯</li>
+                    <li>✓ 燕麥 > 麥片（加糖的那種）</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <h4>原則二：不要單吃澱粉</h4>
+                <p><strong>這個超重要！</strong></p>
+                <p>白飯本身不是問題，問題是「只吃白飯」或「配菜太少」。</p>
+                <ul>
+                    <li>✓ 白飯 + 大量蔬菜 + 蛋白質 = OK</li>
+                    <li>✗ 單吃一碗白飯 = 血糖暴衝</li>
+                    <li>✗ 一碗飯配一點菜 = 還是不夠</li>
+                </ul>
+                <p style="margin-top: 15px;">為什麼？因為蔬菜裡的纖維可以幫白飯「補上守門員」，蛋白質和油脂可以讓消化變慢，血糖就不會暴衝了。</p>
+            </div>
+
+            <div class="principle-box">
+                <h4>原則三：把握黃金比例</h4>
+                <p><strong>一餐的理想比例：</strong></p>
+                <ul>
+                    <li>🥗 蔬菜：50%（至少大半碗，多多益善）</li>
+                    <li>🍗 蛋白質：30%（一個手掌大）</li>
+                    <li>🍚 澱粉：20%（一個拳頭大小）</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>重點：蔬菜一定要最多！</strong>不是「一點菜配很多飯」，是「很多菜配一點飯」</p>
+            </div>
+
+            <div class="principle-box">
+                <h4>原則四：吃澱粉的時機</h4>
+                <p><strong>最好的時機：</strong></p>
+                <ul>
+                    <li>✓ 早餐：一定要吃足量澱粉（提供一整天的能量）</li>
+                    <li>✓ 午餐：正常吃，不要怕</li>
+                    <li>✓ 晚餐：可以少一點，但不是不吃</li>
+                    <li>✓ 運動後：可以多吃一點（這時候身體會拿去用，不會囤積）</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>不好的時機：</strong></p>
+                <ul>
+                    <li>✗ 宵夜吃澱粉（尤其是精緻澱粉）</li>
+                    <li>✗ 睡前2小時內吃大量澱粉</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <h4>原則五：慢慢吃、多咀嚼</h4>
+                <p>細嚼慢嚥可以：</p>
+                <ul>
+                    <li>增加飽足感（大腦有時間接收「飽了」的訊號）</li>
+                    <li>減緩血糖上升速度</li>
+                    <li>幫助消化</li>
+                    <li>讓你更容易察覺「其實我已經飽了」</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>建議：</strong></p>
+                <ul>
+                    <li>每口至少咀嚼20下</li>
+                    <li>一餐至少吃20分鐘</li>
+                </ul>
+            </div>
+
+            <h2>我怎麼吃澱粉還瘦了25公斤</h2>
+
+            <p>很多人好奇：「校長，你減重25公斤時到底怎麼吃澱粉？每天吃多少？都吃什麼？什麼時候吃？」</p>
+
+            <p>讓我告訴你關鍵：</p>
+
+            <div class="good-list">
+                <ul>
+                    <li>我從來不餓肚子</li>
+                    <li>我每天都有吃澱粉</li>
+                    <li>我選的都是好澱粉</li>
+                    <li>我都有搭配大量蔬菜和蛋白質</li>
+                    <li>我懂得「複合著吃」而不是「單吃一樣」</li>
+                </ul>
+            </div>
+
+            <p><strong>結果呢？</strong>25公斤就這樣掉了。而且精神很好、不會累、睡得好。最重要的是：<em>維持了5年沒復胖</em>。</p>
+
+            <div class="divider"></div>
+
+            <h2>學員的真實案例</h2>
+
+            <div class="success-box">
+                <h4>40歲的美玲</h4>
+                <p>她以前一直不敢吃澱粉，因為聽人家說「減肥就是不能吃澱粉」。所以她只吃肉和菜。</p>
+                
+                <p>前兩週瘦很快，很開心。但第三週開始：</p>
+                <ul>
+                    <li>沒力氣</li>
+                    <li>便秘</li>
+                    <li>脾氣暴躁</li>
+                    <li>月經亂掉</li>
+                    <li>整天想吃甜食</li>
+                </ul>
+
+                <p>然後受不了，大吃一頓。全部復胖，還多了2公斤。</p>
+
+                <p>來找我時，她說：「我是不是天生就瘦不下來？」</p>
+                <p>我告訴她：<strong>「問題不是妳，是方法錯了」</strong></p>
+
+                <p style="margin-top: 20px;">我教她開始吃好澱粉：</p>
+                <ul>
+                    <li>早餐吃地瓜</li>
+                    <li>午餐吃糙米飯</li>
+                    <li>都搭配大量蔬菜和蛋白質</li>
+                </ul>
+
+                <p><strong>6個月後，她瘦了15公斤</strong></p>
+
+                <p>而且她發現：</p>
+                <ul>
+                    <li>✓ 精神很好，不會昏昏沉沉</li>
+                    <li>✓ 便秘改善了</li>
+                    <li>✓ 月經正常了</li>
+                    <li>✓ 皮膚變好了</li>
+                    <li>✓ 不會一直想吃甜食了</li>
+                </ul>
+
+                <p style="margin-top: 20px; font-size: 1.2em; font-style: italic;">「原來吃對澱粉，根本不用痛苦。而且這樣吃，我可以吃一輩子，不用再擔心復胖了。」</p>
+            </div>
+
+            <h2>檢測：你吃的是好澱粉還是壞澱粉</h2>
+
+            <p>回想一下你昨天吃的澱粉：</p>
+
+            <h3>早餐</h3>
+            <div class="comparison-grid">
+                <div class="comparison-card bad">
+                    <h4>常見錯誤選擇</h4>
+                    <ul>
+                        <li>白吐司、甜麵包</li>
+                        <li>蛋餅（麵皮是精緻澱粉）</li>
+                        <li>饅頭、包子</li>
+                        <li>稀飯（血糖飆更快）</li>
+                    </ul>
+                </div>
+                <div class="comparison-card good">
+                    <h4>更好的選擇</h4>
+                    <ul>
+                        <li>地瓜、芋頭</li>
+                        <li>燕麥</li>
+                        <li>全麥吐司（真的全麥）</li>
+                        <li>糙米飯糰</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>午餐</h3>
+            <div class="comparison-grid">
+                <div class="comparison-card bad">
+                    <h4>常見錯誤選擇</h4>
+                    <ul>
+                        <li>便當（飯多菜少）</li>
+                        <li>白麵條</li>
+                        <li>炒飯</li>
+                        <li>義大利麵（白麵）</li>
+                        <li>漢堡（白麵包）</li>
+                    </ul>
+                </div>
+                <div class="comparison-card good">
+                    <h4>更好的選擇</h4>
+                    <ul>
+                        <li>便當（菜多飯少，有搭配）</li>
+                        <li>糙米便當</li>
+                        <li>蕎麥麵</li>
+                        <li>地瓜 + 大量蔬菜 + 蛋白質</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>晚餐</h3>
+            <div class="comparison-grid">
+                <div class="comparison-card bad">
+                    <h4>常見錯誤選擇</h4>
+                    <ul>
+                        <li>便當（飯為主，菜很少）</li>
+                        <li>麵類（沒什麼菜）</li>
+                        <li>炒麵、炒米粉</li>
+                        <li>水餃（皮是精緻澱粉）</li>
+                    </ul>
+                </div>
+                <div class="comparison-card good">
+                    <h4>更好的選擇</h4>
+                    <ul>
+                        <li>白飯或五穀飯 + 大量蔬菜 + 蛋白質</li>
+                        <li>烤地瓜 + 沙拉 + 蛋白質</li>
+                        <li>少量澱粉 + 大量菜</li>
+                        <li>豆類（紅豆、綠豆）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>檢視一下：</h4>
+                <p>如果你大部分都選擇前面的選項，那你吃的都是精緻澱粉。難怪：</p>
+                <ul>
+                    <li>總是很容易餓</li>
+                    <li>一直想吃甜的</li>
+                    <li>體重降不下來</li>
+                    <li>肚子越來越大</li>
+                </ul>
+                <p><strong>但別擔心，從今天開始調整，還來得及。</strong></p>
+            </div>
+
+            <h2>4個調整方式，讓你聰明吃澱粉也能瘦</h2>
+
+            <p>不用一次全改，太痛苦了。從這4個方向開始調整：</p>
+
+            <div class="principle-box">
+                <h4>調整一：選對澱粉種類</h4>
+                <p>把精緻澱粉換成原型澱粉：</p>
+                <ul>
+                    <li>白吐司 → 地瓜、燕麥</li>
+                    <li>白麵 → 蕎麥麵、全麥麵</li>
+                    <li>可以考慮把白飯換成糙米飯（或一半一半）</li>
+                </ul>
+                <p>不用一次全換，一餐一餐慢慢調整。</p>
+            </div>
+
+            <div class="principle-box">
+                <h4>調整二：增加蔬菜比例</h4>
+                <p><strong>這個超級重要！</strong></p>
+                <p>蔬菜的纖維可以幫澱粉「補上守門員」，讓血糖不會暴衝。</p>
+                <p><strong>目標：</strong>每餐蔬菜至少要有半碗，最好大半碗。</p>
+                <p>如果外食便當菜不夠，自己買一盒燙青菜。</p>
+            </div>
+
+            <div class="principle-box">
+                <h4>調整三：複合著吃，不要單吃</h4>
+                <p>永遠記得：澱粉不要單獨吃。一定要搭配：</p>
+                <ul>
+                    <li>✓ 蔬菜（纖維）</li>
+                    <li>✓ 蛋白質（增加飽足感）</li>
+                    <li>✓ 好油脂（讓消化變慢）</li>
+                </ul>
+                <p style="margin-top: 15px;">例如：</p>
+                <ul>
+                    <li>✗ 單吃一碗白飯</li>
+                    <li>✓ 白飯 + 大量蔬菜 + 雞胸肉</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <h4>調整四：調整吃澱粉的時機</h4>
+                <p>不是不能吃，是要選對時間：</p>
+                <ul>
+                    <li>✓ 早餐、午餐：正常吃，甚至可以多一點</li>
+                    <li>✓ 晚餐：可以少一點，但不是完全不吃</li>
+                    <li>✗ 宵夜：盡量避免澱粉（尤其精緻澱粉）</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h4>從這4個方向開始調整</h4>
+                <p>不用急，慢慢來。你會發現：</p>
+                <ul>
+                    <li>✓ 不會一直餓了</li>
+                    <li>✓ 精神變好了</li>
+                    <li>✓ 便秘改善了</li>
+                    <li>✓ 體重開始往下掉</li>
+                    <li>✓ 而且不是掉水分，是真的在減脂肪</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="cta-section">
+                <h3>最後想跟你說</h3>
+                <p>如果你也是那種：</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>以為減肥要戒澱粉</li>
+                    <li>試過生酮、低醣，但很痛苦</li>
+                    <li>戒了澱粉反而更容易復胖</li>
+                    <li>一吃澱粉就暴肥</li>
+                </ul>
+                <p style="margin-top: 25px;">那我想跟你說：<strong>問題不是澱粉，問題是你選錯了澱粉。</strong></p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>好的澱粉不會讓你胖</h4>
+                <p>反而會：</p>
+                <ul>
+                    <li>幫助你瘦</li>
+                    <li>讓你有體力</li>
+                    <li>讓你不會一直餓</li>
+                    <li>讓你可以維持一輩子</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>減肥不是要你受苦</h4>
+                <ul>
+                    <li>不是要你餓肚子</li>
+                    <li>不是要你一輩子不能吃澱粉</li>
+                    <li><strong>減肥是要你學會選擇</strong></li>
+                </ul>
+                <p style="margin-top: 15px;">選對食物、搭配對、吃對時機，身體自然會給你回報。</p>
+            </div>
+
+            <div class="quote">
+                7年前，我寫了一篇關於糖跟醣的文章。到現在還有人在看、在問。因為大家真的很困惑。<br><br>
+                今天這篇文章，我把這7年來的經驗、3000位學生的成功案例，全部濃縮在這裡。<br><br>
+                希望能幫助到你。
+            </div>
+
+            <div class="cta-section">
+                <h3>如果你身邊也有人</h3>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>以為減肥要戒澱粉</li>
+                    <li>試過低醣、生酮但很痛苦</li>
+                    <li>一直瘦不下來</li>
+                </ul>
+                <p style="margin-top: 25px; font-size: 1.2em;">請把這篇文章分享給他</p>
+                <p>讓他知道：<strong>澱粉不是敵人，選對才是關鍵</strong></p>
+            </div>
+        </div>
+
+        <!-- LINE官方帳號區塊 -->
+        <div class="line-section">
+            <h3>加入LINE官方帳號，獲取更多健康資訊</h3>
+            <div class="line-content">
+                <div class="line-info">
+                    <a href="https://lin.ee/ApHSqCU" target="_blank" class="line-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="white">
+                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                        </svg>
+                        <span>點擊加入LINE官方帳號</span>
+                    </a>
+                    <p class="line-id">官方帳號ID：<strong>@SOSOSO</strong></p>
+                </div>
+                <div class="qrcode-container">
+                    <div class="qrcode-box">
+                        <img src="line-qrcode.png" alt="LINE QR Code" onerror="this.parentElement.innerHTML='<div class=qrcode-placeholder>[ 請放置 LINE QR Code：line-qrcode.png ]</div>'">
+                    </div>
+                    <p class="qrcode-text">掃描 QR Code 加入</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 健康飲食教育 | 澱粉不是敵人，選對才是關鍵</p>
+        </footer>
+    </div>
+</body>
+</html>
